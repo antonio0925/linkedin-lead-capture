@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>LinkedIn Lead Capture</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="header-left">
+        <h1>LinkedIn Lead Capture</h1>
+      </div>
+      <div id="statusDot" class="status-dot"></div>
+    </div>
+
+    <!-- Master toggle -->
+    <div class="section">
+      <div class="master-toggle">
+        <span>Capture Enabled</span>
+        <label class="toggle">
+          <input type="checkbox" id="captureEnabled" />
+          <span class="toggle-slider"></span>
+        </label>
+      </div>
+    </div>
+
+    <!-- Capture toggles -->
+    <div class="section">
+      <div class="section-label">Capture Actions</div>
+      <div class="capture-toggles">
+        <div class="checkbox-row">
+          <input type="checkbox" id="captureConnect" />
+          <label for="captureConnect">Connect</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="captureLike" />
+          <label for="captureLike">Like</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="captureMessage" />
+          <label for="captureMessage">Message</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="captureComment" />
+          <label for="captureComment">Comment</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="captureRepost" />
+          <label for="captureRepost">Repost</label>
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="captureInmail" />
+          <label for="captureInmail">InMail</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Webhook URL -->
+    <div class="section">
+      <div class="section-label">Webhook URL</div>
+      <input
+        type="url"
+        id="webhookUrl"
+        class="webhook-input"
+        placeholder="https://hooks.example.com/webhook"
+      />
+      <div id="webhookHint" class="webhook-hint"></div>
+    </div>
+
+    <!-- Recent Captures -->
+    <div class="section">
+      <div class="section-label">Recent Captures</div>
+      <div id="capturesList" class="captures-list">
+        <div class="empty-state">No captures yet</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <span id="captureCount" class="capture-count">0 captures</span>
+      <button id="retryBtn" class="retry-btn hidden">Retry Failed</button>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

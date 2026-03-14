@@ -1,0 +1,19 @@
+import { defineConfig } from 'vitest/config';
+
+export default defineConfig({
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    include: ['tests/**/*.test.ts'],
+    coverage: {
+      provider: 'v8',
+      include: ['src/**/*.ts'],
+      exclude: ['src/popup/popup.ts'], // popup is hard to unit test
+    },
+  },
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
+  },
+});

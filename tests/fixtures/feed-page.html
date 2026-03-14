@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>LinkedIn Feed</title></head>
+<body>
+  <div class="scaffold-finite-scroll__content">
+    <!-- A single feed post card -->
+    <div data-urn="urn:li:member:12345" data-id="feed-post-1">
+
+      <!-- Actor info -->
+      <div class="update-components-actor">
+        <a data-control-name="actor" href="https://www.linkedin.com/in/janedoe/">
+          <span aria-hidden="true">Jane Smith</span>
+        </a>
+        <div class="update-components-actor__description">
+          <span aria-hidden="true">Head of Marketing at Globex Inc</span>
+        </div>
+        <div class="update-components-actor__image">
+          <img src="https://media.licdn.com/photo/janesmith.jpg" alt="Jane Smith" />
+        </div>
+      </div>
+
+      <!-- Post content -->
+      <div class="feed-shared-update-v2__description-wrapper">
+        <p>Excited to share our latest product launch!</p>
+      </div>
+
+      <!-- Reaction bar -->
+      <div class="social-details-social-activity">
+        <button aria-label="Like Jane Smith's post" data-reaction-type="LIKE">
+          <span>Like</span>
+        </button>
+        <button aria-label="Comment on Jane Smith's post">
+          <span>Comment</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
